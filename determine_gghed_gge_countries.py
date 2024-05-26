@@ -9,4 +9,4 @@ with open("GHED_data.csv", "r") as f:
         gghed_gge = gghed_gge.strip()
 
         if not (gghed_gge==""):
-            print(f"{i["country"]}, {i["year"]}")
+            print(f"{i["country"]}, {i["year"]}, {i["gghed_gge"]}")
