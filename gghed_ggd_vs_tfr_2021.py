@@ -19,7 +19,7 @@ for i in range(0, 3):
 
         for x in reader:
             if x["country"]==countries_spending[i] and int(x["year"]) in years:
-                x_vals[years.index(int(x["year"]))] = x["gghed_gge"]
+                x_vals[years.index(int(x["year"]))] = float(x["gghed_gge"])
 
     with open("TFR.csv", "r") as f:
         reader = csv.reader(f)
@@ -37,7 +37,7 @@ for i in range(0, 3):
                 elif x[0]==str(y):
                     for z in x:
                         if x.index(z)==country_ind[i]:
-                            y_vals[ind] = z
+                            y_vals[ind] = float(z)
 
     print(x_vals)
     print(y_vals)
@@ -54,6 +54,11 @@ for i in range(0, 3):
         y_vals.pop(r)
         x_vals.pop(r)
 
-    plt.scatter(x_vals, y_vals)
+    plt.scatter(x_vals, y_vals, label=countries_tfr[i])
+
+plt.xlabel("Domestic General Government Health Expenditure (GGHE-D) as % General Government Expenditure (GGE)")
+plt.ylabel("Total Fertility Rate as Children Per Woman")
+plt.title("Government Health Expenditure VS. Total Fertility Rate (2000-2021")
+plt.legend()
 
 plt.show()
