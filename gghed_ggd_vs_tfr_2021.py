@@ -58,7 +58,7 @@ for i in range(0, 3):
 
 plt.xlabel("Domestic General Government Health Expenditure (GGHE-D) as % General Government Expenditure (GGE)")
 plt.ylabel("Total Fertility Rate as Children Per Woman")
-plt.title("Government Health Expenditure VS. Total Fertility Rate (2015-2021")
+plt.title("Government Health Expenditure VS. Total Fertility Rate (2015-2021)")
 plt.legend()
 
 plt.show()

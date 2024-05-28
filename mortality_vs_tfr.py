@@ -57,7 +57,7 @@ for i in range(0, 3):
 
 plt.xlabel("Mortality Rate as Deaths per 100,000")
 plt.ylabel("Total Fertility Rate as Children Per Woman")
-plt.title("Mortality Rate VS. Total Fertility Rate (2015-2021")
+plt.title("Mortality Rate VS. Total Fertility Rate (2015-2021)")
 plt.legend()
 
 plt.show()
