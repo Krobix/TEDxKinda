@@ -55,6 +55,8 @@ for i in range(0, 3):
         x_vals.pop(r)
 
     plt.scatter(x_vals, y_vals, label=countries_tfr[i])
+    for c in range(len(x_vals)):
+        plt.annotate(str(years[c]), [x_vals[c], y_vals[c]])
 
 plt.xlabel("Domestic General Government Health Expenditure (GGHE-D) as % General Government Expenditure (GGE)")
 plt.ylabel("Total Fertility Rate as Children Per Woman")
